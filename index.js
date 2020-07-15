@@ -257,6 +257,7 @@ const ScrollableTabView = createReactClass({
         onPageSelected={this._updateSelectedPage}
         keyboardDismissMode="on-drag"
         scrollEnabled={!this.props.locked}
+        onPageScrollStateChanged={(evt)=>this.props.onPageScrollStateChanged(evt.nativeEvent.pageScrollState)}
         onPageScroll={Animated.event(
           [{
             nativeEvent: {
